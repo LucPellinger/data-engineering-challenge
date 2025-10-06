@@ -11,8 +11,42 @@ This repository contains the code for the Data Engineering Junior Coding Challen
 The project is organized into the following main directories:
 
 - `src/`: Contains the source code for the data processing and validation.
-- `notebooks/`: Contains Jupyter notebooks for exploratory data analysis and visualization.
+- `notebooks/`: Contains Jupyter notebooks for exploratory data analysis and dataset preprocessing.
 - `pgadmin/`: Contains configuration files for pgAdmin, a web-based database management tool.
+
+## Project File Tree
+
+```
+data-engineering-challenge/
+├── src/
+│   ├── assets/
+│   │   ├── dataset/
+│   │   │   ├── analysis/...
+│   │   │   ├── raw/
+│   │   │   │   ├── products/...          <--- place raw product (.xlsx) files here
+│   │   │   │   └── transactions/...      <--- place raw transaction (.csv) files here
+│   │   │   └── processed/
+│   │   │       ├── products/...
+│   │   │       └── transactions/...
+│   │   └── images/...
+│   ├── db/...
+│   │   └── sql/...
+│   ├── etl/
+│   │   ├── ingest/...
+│   │   └── tables/...
+│   ├── sql/
+│   │   └── queries/...
+│   └── utils/...
+├── notebooks/
+│   └── profiling.ipynb
+├── pgadmin/
+│   └── ...
+├── .env
+├── .gitignore
+├── docker-compose.yml
+├── README.md
+└── requirements.txt
+```
 
 ## Prerequisites
 - Python 3.12
@@ -73,18 +107,36 @@ The project is organized into the following main directories:
 
 Most heavy lifting is done in the `src/` directory. To completely rerun the data processing pipeline, follow the steps below in your terminal from the `project root directory`:
 
-1. **Ingest the Data**: Run the ingestion script to setup the DB schema in PostgreSQL.
+0. **Download and Place the Data**: 
+    
+    Download the dataset from the provided link and place the files in the `src/assets/dataset/raw/transactions/` and `src/assets/dataset/raw/products/` directories respectively.
+
+1. **Activate the Virtual Environment**: Ensure your virtual environment is activated.
+
+    ```bash
+    conda activate data-engineering-challenge
+    ```
+
+2. **Run the profiling and preprocessing**: Run the profiling and preprocessing via `profiling.ipynb` to prepare the data for ingestion.
+
+    ```bash
+    code notebooks/profiling.ipynb
+    ```
+
+    Then run all the cells inside the notebook.
+
+3. **Ingest the Data**: Run the ingestion script to setup the DB schema in PostgreSQL.
 
     ```bash
     python -m src.etl.ingest.create_db
     ```
 
-2. **Load the Data**: Run the data loading script to process and load the data into the database. Be aware that this step may take some time to complete (around 20-30 minutes minimum).
+4. **Load the Data**: Run the data loading script to process and load the data into the database. Be aware that this step may take some time to complete (around 20-30 minutes minimum).
     ```bash
     python -m src.etl.ingest.data_loader
     ```
 
-3. **Query the Data**: You can use the provided scripts to query the data and perform various analyses.
+5. **Query the Data**: You can use the provided scripts to query the data and perform various analyses.
 
     List available predefined SQL queries:
     ```bash
@@ -96,7 +148,7 @@ Most heavy lifting is done in the `src/` directory. To completely rerun the data
     python -m src.etl.ingest.run_sql_cli --name <QUERY_FILE_NAME>
     ```
 
-4. **Running new queries**: You can also run your own SQL queries by providing a path to a `.sql` file or by dropping it into the `sql/queries` directory and using the `--name` flag.:
+6. **Running new queries**: You can also run your own SQL queries by providing a path to a `.sql` file or by dropping it into the `sql/queries` directory and using the `--name` flag.:
     ```bash
     python -m src.etl.ingest.run_sql_cli --path <PATH_TO_YOUR_SQL_FILE>
     ```

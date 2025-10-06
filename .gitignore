@@ -96,7 +96,7 @@ tmp/
 # PostgreSQL (containerized)
 # ------------------------------------------------------------------------------
 # Postgres dump & backups
-*.sql
+#*.sql
 *.sql.gz
 *.dump
 *.backup
