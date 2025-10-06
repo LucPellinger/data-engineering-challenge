@@ -1,0 +1,16 @@
+# Core
+pandas
+polars
+pyarrow
+fastexcel
+pydantic
+SQLAlchemy
+psycopg2-binary
+
+# Jupyter / notebooks
+notebook
+ipykernel
+jupyterlab
+
+# Utilities
+python-dotenv  # for reading .env

@@ -1,0 +1,130 @@
+# ------------------------------------------------------------------------------
+# Python
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+*.manifest
+*.spec
+
+# Virtual envs
+
+.venv/
+venv/
+ENV/
+env/
+.ipynb_checkpoints/
+
+# Jupyter
+*.ipynb_checkpoints
+jupyter_notebook_config.py
+
+# Logs & temp
+*.log
+*.tmp
+*.temp
+*.out
+*.bak
+
+# Byte-compiled / cache
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+.cache/
+
+# Build artifacts
+build/
+dist/
+*.egg
+*.egg-info/
+
+# ------------------------------------------------------------------------------
+# Data files (large, raw, or generated)
+# ------------------------------------------------------------------------------
+*.csv
+*.xlsx
+*.xls
+*.tsv
+*.parquet
+*.db
+*.sqlite
+*.sqlite3
+*.h5
+*.feather
+*.arrow
+
+# .Data folders to keep structure but ignore contents
+data/**/*
+data/**/.gitkeep   # keep the folder
+data/raw/**/*
+data/raw/**/.gitkeep        # keep the folder
+data/processed/**/*
+data/processed/**/.gitkeep  # keep the folder
+
+
+
+!data/.gitkeep        # keep the folder
+
+# Keep small sample data if needed:
+# !sample_data/*.csv
+
+# ------------------------------------------------------------------------------
+# Environment / secrets
+# ------------------------------------------------------------------------------
+
+secrets.json
+credentials.json
+
+# ------------------------------------------------------------------------------
+# Docker
+# ------------------------------------------------------------------------------
+# Ignore build context artifacts
+*.pid
+*.seed
+*.pid.lock
+
+# Docker build folders
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# Docker local volumes
+volumes/
+tmp/
+.docker/
+
+# ------------------------------------------------------------------------------
+# PostgreSQL (containerized)
+# ------------------------------------------------------------------------------
+# Postgres dump & backups
+*.sql
+*.sql.gz
+*.dump
+*.backup
+
+# Postgres data directories (mounted volumes)
+pgdata/
+postgres-data/
+data/postgres/
+
+# ------------------------------------------------------------------------------
+# OS / IDE specific
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp
