@@ -2,6 +2,11 @@
 
 This repository contains the code for the Data Engineering Junior Coding Challenge. The challenge involves working with a dataset of transactions and products, and involves performing various data engineering tasks on roughly 18 million samples.
 
+You can find the result in [SQL Query Results](#sql-query-results).
+
+To get started, please follow the instructions below at [Getting Started](#getting-started).
+
+
 <center>
 <img src="src/assets/images/overview.png" alt="Project Overview" width="900"/>
 </center>
