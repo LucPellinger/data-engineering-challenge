@@ -88,6 +88,7 @@ data-engineering-challenge/
 - jupyterlab
 - python-dotenv
 - matplotlib
+- python-dotenv 
 
 
 
