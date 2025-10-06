@@ -58,18 +58,12 @@ dist/
 *.feather
 *.arrow
 *.pptx
+#src/assets/dataset/processed/products/products.csv
+#src/assets/dataset/processed/transactions/data1.csv
+#src/assets/dataset/processed/transactions/data2.csv
+#src/assets/dataset/processed/transactions/data3.csv
 
 # .Data folders to keep structure but ignore contents
-data/**/*
-data/**/.gitkeep   # keep the folder
-data/raw/**/*
-data/raw/**/.gitkeep        # keep the folder
-data/processed/**/*
-data/processed/**/.gitkeep  # keep the folder
-
-
-
-!data/.gitkeep        # keep the folder
 
 # Keep small sample data if needed:
 # !sample_data/*.csv
