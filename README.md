@@ -11,6 +11,15 @@ To get started, please follow the instructions below at [Getting Started](#getti
 <img src="src/assets/images/overview.png" alt="Project Overview" width="900"/>
 </center>
 
+The project is based on Python and utilizes libraries such as Polars, PyArrow, FastExcel, Pydantic, SQLAlchemy, and Psycopg2-Binary for data processing and validation. Jupyter Notebooks are used for exploratory data analysis and dataset preprocessing. PostgreSQL is used as the database management system, and Docker is employed for containerization.
+
+The upside of using Polars over Pandas is that it is faster and more memory efficient, especially for larger datasets. Polars is designed to handle larger-than-memory datasets and can perform operations in parallel, making it a better choice for data engineering tasks. It is also easy to install locally, which is why it was chosen for this challenge.
+
+
+<center>
+<img src="src/assets/images/load_times.png" alt="Project Overview" width="900"/>
+</center>
+
 ## Project Structure
 
 The project is organized into the following main directories:
@@ -78,6 +87,7 @@ data-engineering-challenge/
 - ipykernel
 - jupyterlab
 - python-dotenv
+- matplotlib
 
 
 

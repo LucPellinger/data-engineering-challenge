@@ -6,6 +6,7 @@ fastexcel
 pydantic
 SQLAlchemy
 psycopg2-binary
+matplotlib
 
 # Jupyter / notebooks
 notebook
