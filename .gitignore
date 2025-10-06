@@ -57,6 +57,7 @@ dist/
 *.h5
 *.feather
 *.arrow
+*.pptx
 
 # .Data folders to keep structure but ignore contents
 data/**/*
