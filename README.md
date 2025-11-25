@@ -4,7 +4,7 @@ This repository contains the code for the Data Engineering Junior Coding Challen
 
 You can find the result in [SQL Query Results](#sql-query-results).
 
-To get started, please follow the instructions below at [Getting Started](#getting-started).
+To get started, please follow the instructions below at [Getting Started](#getting-started). Send me a request if you want to get the dataset for the challenge.
 
 
 <center>
